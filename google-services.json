@@ -25,15 +25,42 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772731269924-g8l05tdrnrk80agjpkbtro66umgnliin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772731269924:android:9735c031c1b9cef4c0f9b1",
+        "android_client_info": {
+          "package_name": "com.softronel.safraamorestellez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772731269924-g8l05tdrnrk80agjpkbtro66umgnliin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyMzmkpVf45NxjujNIuGAXEQcay1DqaEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772731269924-g8l05tdrnrk80agjpkbtro66umgnliin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
