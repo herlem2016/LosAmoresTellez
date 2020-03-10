@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="com.softronel.safra.losamores" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+  <name>Los Amores Tellez</name>
+  <description>
+    Sistema de Administración para Condominios y Fraccionamientos
+  </description>
+  <author email="herlem.kx@gmail.com" href="softronel.com.mx">
+    Softronel Team
+  </author>
+  <icon src="img/icon.png" />    
+  <platform name="android">	
+    <resource-file src="google-services.json" target="app/google-services.json" />
+  </platform>
+  <preference name='phonegap-version' value='cli-9.0.0' />
+  <preference name='pgb-builder-version' value='2' />
+  <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
+  <plugin name="cordova-plugin-inappbrowser" source="npm" version="1.0.1" />
+  <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+  <plugin name="cordova-plugin-image-picker"  source="npm" />
+  <plugin name="cordova-plugin-file-transfer" source="npm" />
+  <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+  <plugin name="cordova-plugin-badge"/>
+  <plugin name="cordova-plugin-device"/>
+  <plugin name="cordova-plugin-file"/>
+  <plugin name="cordova-plugin-file-opener2"/>
+  <plugin name="cordova-plugin-autostart@2.3.0"/> 
+  <plugin name="cordova-plugin-android-permissions@1.0.2"/> 
+  <plugin name="cordova-plugin-local-notifications-mm"/> 
+  <plugin name="cordova-plugin-background-mode"/>  
+  <preference name="orientation" value="portrait" />
+  <content src="index.html" />
+  <allow-intent href="*" />
+  <access origin="*" />
+  <allow-navigation href="*" />  
+</widget>
