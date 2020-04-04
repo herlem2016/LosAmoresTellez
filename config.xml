@@ -31,5 +31,9 @@
   <content src="index.html" />
   <allow-intent href="*" />
   <access origin="*" />
-  <allow-navigation href="*" />  
+  <allow-navigation href="*" /> 
+	<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+		<application android:usesCleartextTraffic="true" />
+	</edit-config>
+	
 </widget>
