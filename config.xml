@@ -32,7 +32,7 @@
   <allow-intent href="*" />
   <access origin="*" />
   <allow-navigation href="*" /> 
-  <config-file platform="android" parent="/manifest" mode="merge">
+  <config-file target="AndroidManifest.xml" parent="/manifest/application" mode="merge">
   <application android:usesCleartextTraffic="true" />
 </config-file>
 	
