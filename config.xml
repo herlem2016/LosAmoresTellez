@@ -32,5 +32,8 @@
   <allow-intent href="*" />
   <access origin="*" />
   <allow-navigation href="*" /> 
+  <config-file platform="android" parent="/manifest" mode="merge">
+  <application android:usesCleartextTraffic="true" />
+</config-file>
 	
 </widget>
