@@ -13,6 +13,7 @@
   </platform>
   
   <preference name='phonegap-version' value='cli-9.0.0' />
+  <preference name="android-targetSdkVersion" value="28" />
   
   <preference name='pgb-builder-version' value='2' />
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
