@@ -11,6 +11,13 @@
   <platform name="android">	
     <resource-file src="google-services.json" target="app/google-services.json" />
   </platform>
+  <platform name="ios">
+	  <resource-file src="GoogleService-Info.plist" />
+	</platform>
+    
+  <platform name="ios">	
+    <resource-file src="google-services.json" target="app/google-services.json" />
+  </platform>
   
   <preference name='phonegap-version' value='cli-9.0.0' />
   <preference name="android-targetSdkVersion" value="28" />
