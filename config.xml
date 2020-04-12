@@ -12,7 +12,6 @@
     <resource-file src="google-services.json" target="app/google-services.json" />
   </platform>
 	<platform name="ios">
-		<resource-file src="GoogleService-Info.plist" />
 		<icon height="57" platform="ios" src="res/icon/ios/icon.png" width="57" />
 		<icon height="114" platform="ios" src="res/icon/ios/icon@2x.png" width="114" />
 		<icon height="40" platform="ios" src="res/icon/ios/icon-40.png" width="40" />
