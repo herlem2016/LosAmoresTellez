@@ -6,9 +6,9 @@
   </description>
   <author email="herlem.kx@gmail.com" href="softronel.com.mx">
     Softronel Team
-  </author>
-  <icon src="img/icon.jpg" />    
+  </author>   
   <platform name="android">	
+	<icon src="img/icon.jpg" /> 
     <resource-file src="google-services.json" target="app/google-services.json" />
   </platform>
 	<platform name="ios">
