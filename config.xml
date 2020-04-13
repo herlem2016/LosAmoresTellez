@@ -31,6 +31,12 @@
   <plugin name="cordova-plugin-background-mode"/>  
   <preference name="orientation" value="portrait" />
   <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
   <allow-intent href="*" />
   <access origin="*" />
   <allow-navigation href="*" />  
