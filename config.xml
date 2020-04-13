@@ -7,8 +7,9 @@
   <author email="herlem.kx@gmail.com" href="softronel.com.mx">
     Softronel Team
   </author>   
-	<icon src="www/img/icon.jpg" />
-  <platform name="android">	 
+    <content src="index.html" />
+  <platform name="android">	
+	<icon src="www/img/icon.jpg" /> 
     <resource-file src="google-services.json" target="app/google-services.json" />
   </platform>
 	
