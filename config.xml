@@ -5,8 +5,7 @@
   </description>
   <author email="info@softronel.com.mx" href="softronel.com.mx">
     Softronel Team
-  </author>
-  <icon src="www/img/icon.png" />    
+  </author>   
   <platform name="android">	
     <resource-file src="google-services.json" target="app/google-services.json" />
   </platform>
