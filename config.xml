@@ -6,9 +6,7 @@
   <author email="info@softronel.com.mx" href="softronel.com.mx">
     Softronel Team
   </author>   
-  
-  <content src="index.html" />
-  <icon src="img/icon.png" /> 
+  <icon src="img/icon.png" />  
   <platform name="android">	
     <resource-file src="google-services.json" target="app/google-services.json" />
 	<preference name="android-targetSdkVersion" value="28" />
@@ -30,11 +28,11 @@
   <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-file"/>
   <plugin name="cordova-plugin-file-opener2"/>  
-  <preference name="orientation" value="portrait" />
+  <preference name="orientation" value="portrait" /> 
+  <content src="index.html" />
   <allow-intent href="*" />
   <access origin="*" />
-  <allow-navigation href="*" />  
-  
+  <allow-navigation href="*" />    
   <platform name="android">
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
