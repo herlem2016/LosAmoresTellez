@@ -8,7 +8,7 @@
   </author>   
   
   <content src="index.html" />
-  <icon src="icon.png" /> 
+  <icon src="img/icon.png" /> 
   <platform name="android">	
     <resource-file src="google-services.json" target="app/google-services.json" />
 	<preference name="android-targetSdkVersion" value="28" />
