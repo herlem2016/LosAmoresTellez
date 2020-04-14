@@ -75,7 +75,7 @@
 		var i_unsubs = 0;
 		function DesSuscribirNotificaciones(datos){
 			if (i_unsubs < datos.length){
-				FCMPlugin.unsubscribeFromTopic(datos[i_unsubs], function () {
+				FCMPlugin.unsubscribeFromTopic(datos[i_unsubs], function(){
 					if (i_unsubs < l_s) {DesSuscribirNotificaciones(datos);}
 				});
 			}
