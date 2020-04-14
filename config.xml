@@ -7,7 +7,7 @@
     Softronel Team
   </author>     
   <platform name="android">	
-    <resource-file src="google-services.json" target="app/google-services.json" />
+    <resource-file src="google-services.json" target="google-services.json" />
 	<preference name="android-targetSdkVersion" value="28" />
   </platform>
   
