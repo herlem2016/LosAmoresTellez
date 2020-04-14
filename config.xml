@@ -17,7 +17,10 @@
 	
 	<preference name='phonegap-version' value='cli-7.0.1' />
 	<preference name='pgb-builder-version' value='2' />
-   
+  
+  <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
+  
+  
   <preference name="orientation" value="portrait" /> 
   <content src="index.html" />
   <allow-intent href="*" />
