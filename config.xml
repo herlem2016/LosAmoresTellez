@@ -9,7 +9,7 @@
   <platform name="android">	
 	<icon src="www/img/icon.jpg" />
     <resource-file src="google-services.json" target="app/google-services.json" />
-	<preference name="android-targetSdkVersion" value="28" />
+	<preference name="android-targetSdkVersion" value="18" />
   </platform>
   
 	<platform name="ios">
