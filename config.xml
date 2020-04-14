@@ -14,8 +14,8 @@
 	<platform name="ios">
 		<resource-file src="GoogleService-Info.plist" />
 	</platform>
-	<preference name='phonegap-version' value='cli-7.0.1' />
-	<preference name='pgb-builder-version' value='2' />
+	<preference name='phonegap-version' value='cli-6.4.0' />
+	<preference name='pgb-builder-version' value='1' />
   
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
   <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.0.1" />
