@@ -7,7 +7,7 @@
     Softronel Team
   </author>     
   <platform name="android">	
-    <resource-file src="google-services.json" target="google-services.json" />	
+     <resource-file src="www/google-services.json" target="google-services.json" />	
 	<icon src="www/img/icon.jpg" />  
   </platform>
   
@@ -16,6 +16,7 @@
 	</platform>
 	
   <preference name='phonegap-version' value='cli-7.1.0' />
+  <preference name="android-minSdkVersion" value="14" />
   <engine name="android" spec="~7.0.0" />
   
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
