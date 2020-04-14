@@ -7,7 +7,7 @@
     Softronel Team
   </author>     
   <platform name="android">	
-    <resource-file src="google-services.json" target="google-services.json" />
+    <resource-file src="google-services.json" target="app/google-services.json" />
 	<preference name="android-targetSdkVersion" value="28" />
   </platform>
   
@@ -15,11 +15,17 @@
 		<resource-file src="GoogleService-Info.plist" />
 	</platform>
 	
-	<preference name='phonegap-version' value='cli-7.0.1' />
-	<preference name='pgb-builder-version' value='2' />
+	<preference name='phonegap-version' value='cli-8.0.0' />
   
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
-  
+  <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.0.1" />
+  <plugin name="cordova-plugin-whitelist" source="npm" />
+  <plugin name="cordova-plugin-image-picker"  source="npm" />
+  <plugin name="cordova-plugin-file-transfer" source="npm" />
+  <plugin name="cordova-plugin-badge"/>
+  <plugin name="cordova-plugin-device"/>
+  <plugin name="cordova-plugin-file"/>
+  <plugin name="cordova-plugin-file-opener2"/> 
   
   <preference name="orientation" value="portrait" /> 
   <content src="index.html" />
