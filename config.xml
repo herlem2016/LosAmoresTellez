@@ -29,7 +29,7 @@
   <plugin name="cordova-plugin-file"/>
   <plugin name="cordova-plugin-file-opener2"/>  
   <preference name="orientation" value="portrait" /> 
-  <content src="www/index.html" />
+  <content src="index.html" />
   <allow-intent href="*" />
   <access origin="*" />
   <allow-navigation href="*" />    
