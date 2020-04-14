@@ -24,7 +24,7 @@
   <plugin name="cordova-plugin-image-picker"  source="npm" />
   <plugin name="cordova-plugin-file-transfer" source="npm" />
   <plugin name="cordova-plugin-badge"/>
-  <plugin name="cordova-plugin-file"/>
+  <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-file-opener2"/>  
   <preference name="orientation" value="portrait" /> 
   <content src="index.html" />
