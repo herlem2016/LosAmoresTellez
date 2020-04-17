@@ -16,7 +16,7 @@
 		<resource-file src="GoogleService-Info.plist" />
 	</platform>
 	
-  <preference name='phonegap-version' value='cli-9.0.0' />
+  <preference name='phonegap-version' value='cli-7.0.1' />
   
   
   <plugin name="cordova-plugin-ionic-webview" spec="~1.2.1" source="npm" />   
@@ -30,6 +30,7 @@
   <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-file"/>
   <plugin name="cordova-plugin-file-opener2"/> 
+  <plugin name="cordova-plugin-crosswalk-webview-v3"/> 
   
   <preference name="orientation" value="portrait" /> 
   <content src="index.html" />
