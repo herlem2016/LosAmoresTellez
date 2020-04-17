@@ -13,6 +13,61 @@
 			alert(2);
 		}
 		
+		function ondeviceready() {
+			window.frames["app"].postMessage({funcion:"IsPhoneGap",params:[true]},'*');
+			FCMPlugin.onNotification(function(data){
+				cordova.plugins.notification.badge.increase(1, function () { }); 
+				/*if(data.wasTapped){
+					cordova.plugins.notification.badge.set(0);
+				}*/
+				if (data.modulo == 1){
+					window.frames["app"].postMessage({funcion:"ActivarAlarma_",params:[data.contenidovoz]},'*');
+				}else{
+					window.frames["app"].postMessage({funcion:"PantallaMostrar",params:["notificaciones", "section"]},'*');
+				} 
+			});
+		}
+		
+		var i_unsubs = 0;
+		function DesSuscribirNotificaciones(datos){
+			if (i_unsubs < datos.length){
+				FCMPlugin.unsubscribeFromTopic(datos[i_unsubs], function(){
+					if (i_unsubs < l_s) {DesSuscribirNotificaciones(datos);}
+				});
+			}
+		}
+
+		var i_subs = 0;
+		function SuscribirNotificaciones(datos) {
+			if (i_subs < datos.length){
+				FCMPlugin.subscribeToTopic(datos[i_subs++], function(){
+					SuscribirNotificaciones(datos); 
+				});
+			}
+		}	
+		
+		function SeleccionarImagenes(){
+			try {				
+				window.imagePicker.getPictures(
+					function (results) {
+						if(results.length > 0) {							
+							try{
+								window.frames["app"].postMessage({funcion:'CargarImagenPhoneGap',params:[results[results.length-1]]},'*');
+							}catch(e){alert(e.message);}
+						};	
+					}, function (error) {
+						alert('Error: ' + error);
+					},{maximumImagesCount: 2,width: 500,height: 500,quality: 40, outputType: 1}
+				);
+				
+			} catch (e) { alert(e.message);}
+		}
+				
+		window.addEventListener("message", function(event) {
+			try{
+				window[event.data.funcion](...event.data.datos);
+			}catch(e){alert(e.message);}
+		}, false);
 		
 		
     </script>
