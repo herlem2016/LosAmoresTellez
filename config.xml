@@ -16,7 +16,6 @@
 		<resource-file src="GoogleService-Info.plist" />
 	</platform>
 	
-  <preference name='phonegap-version' value='cli-6.0.1' />
   
   
   
