@@ -61,6 +61,7 @@
 		function ondeviceready() {
 			try{
 			window.frames["app"].postMessage({funcion:"IsPhoneGap"},'*');
+			alert('ipg');
 			}catch(e){alert(e.message);}
 			FCMPlugin.onNotification(function(data){
 				cordova.plugins.notification.badge.increase(1, function () { }); 
