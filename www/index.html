@@ -13,13 +13,7 @@
 		
 		
 		function iniciar(){
-			try {document.addEventListener("deviceready", ondeviceready, false);} catch (e) {}
-			alert(1);
-			if(!window.navigator.onLine){
-				window.frames["app"].location.href="no-internet.html";
-			}else{
-				window.frames["app"].location.href=_url+"/ui/mobile/safra/index.aspx";
-			}
+			
 			alert(2);
 		}
 				
