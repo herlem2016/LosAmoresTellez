@@ -30,7 +30,6 @@
   <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-file"/>
   <plugin name="cordova-plugin-file-opener2"/> 
-  <plugin name="cordova-plugin-crosswalk-webview-v3"/> 
   
   <preference name="orientation" value="portrait" /> 
   <content src="index.html" />
