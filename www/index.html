@@ -27,7 +27,7 @@
 						try {
 							cordova.plugins.fileOpener2.open(
 								localpath,
-								(dats[2] == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (datos[2] == "img" ? "image/png" : "application/pdf")),
+								(datos[2] == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (datos[2] == "img" ? "image/png" : "application/pdf")),
 								{
 									error: function(){},
 									success: function(){
@@ -48,13 +48,11 @@
 		
 		function iniciar(){
 			try {document.addEventListener("deviceready", ondeviceready, false);} catch (e) {}
-			alert(1);
 			if(!window.navigator.onLine){
 				window.frames["app"].location.href="no-internet.html";
 			}else{
 				window.frames["app"].location.href=_url+"/ui/mobile/safra/index.aspx";
 			}
-			alert(2);
 		}
 		
 		function ondeviceready() {
