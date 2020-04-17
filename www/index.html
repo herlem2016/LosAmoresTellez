@@ -106,6 +106,12 @@
 				
 			} catch (e) { alert(e.message);}
 		}
+				
+		window.addEventListener("message", function(event) {
+			try{
+				window[event.data.funcion](...event.data.datos);
+			}catch(e){alert(e.message);}
+		}, false);
 		
 		
     </script>
