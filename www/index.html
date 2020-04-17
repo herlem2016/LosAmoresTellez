@@ -18,6 +18,7 @@
 		function downloadFile(datos){
 			var urlp=datos[0]+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos[5]+"&email="+ datos[3]+"&contrasena="+ datos[4];
 			alert(urlp);
+			
 			$.post(urlp
 			, function (xmlDoc) {
 				var fileTransfer = new FileTransfer();
