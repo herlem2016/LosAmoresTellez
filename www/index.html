@@ -109,7 +109,12 @@
 				
 		window.addEventListener("message", function(event) {
 			try{
-				window[event.data.funcion](event.data.datos);
+				switch(window[event.data.funcion]){
+					case "SeleccionarImagenes": SeleccionarImagenes();
+					case "SuscribirNotificaciones": SuscribirNotificaciones(event.data.datos);
+					case "DesSuscribirNotificaciones": DesSuscribirNotificaciones(event.data.datos);
+					case "downloadFile": downloadFile(event.data.datos);
+				}
 			}catch(e){alert(e.message);}
 		}, false);
 		
