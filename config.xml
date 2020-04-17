@@ -1,4 +1,4 @@
-<widget id="com.softronel.safraamorestellez" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.softronel.safraamorestellez" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" >
   <name>Los Amores Tellez</name>
   <description>
     Sistema de Administración para Condominios y Fraccionamientos
@@ -9,7 +9,7 @@
   <platform name="android">	
 	<icon src="www/img/icon.jpg" />
     <resource-file src="google-services.json" target="app/google-services.json" />
-	<preference name="android-targetSdkVersion" value="18" />
+	<preference name="android-targetSdkVersion" value="19" />
   </platform>
   
 	<platform name="ios">
