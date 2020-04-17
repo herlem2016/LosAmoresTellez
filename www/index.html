@@ -15,19 +15,19 @@
 			window.location.reload();
 		}
 		
-		function downloadFile(url,filename,extension,email,pass,ca){
-			$.post(url+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + ca, [{ name: "email", value: email }, { name: "contrasena", value: pass }]
+		function downloadFile(datos){
+			$.post(datos.url+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos.ca, [{ name: "email", value: datos.email }, { name: "contrasena", value: datos.pass }]
 			, function (xmlDoc) {
 				var fileTransfer = new FileTransfer();
-				var localpath = cordova.file.externalDataDirectory + filename;
-				fileTransfer.download(encodeURI(url),
+				var localpath = cordova.file.externalDataDirectory + datos.filename;
+				fileTransfer.download(encodeURI(datos.url),
 					localpath,
 					function (thefile) {
 						var localpath = thefile.toURL();
 						try {
 							cordova.plugins.fileOpener2.open(
 								localpath,
-								(extension == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (extension == "img" ? "image/png" : "application/pdf")),
+								(extension == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (datos.extension == "img" ? "image/png" : "application/pdf")),
 								{
 									error: function(){},
 									success: function(){
@@ -67,7 +67,7 @@
 				if (data.modulo == 1){
 					window.frames["app"].postMessage({funcion:"ActivarAlarma_",params:[data.contenidovoz]},'*');
 				}else{
-					window.frames["app"].postMessage({funcion:"PantallaMostrar",params:["notificaciones", "section"]},'*');
+					window.frames["app"].postMessage({funcion:"W_PantallaMostrar",params:["notificaciones", "section"]},'*');
 				} 
 			});
 		}
@@ -109,7 +109,7 @@
 				
 		window.addEventListener("message", function(event) {
 			try{
-				//window[event.data.funcion](...event.data.datos);
+				window[event.data.funcion](event.data.datos);
 			}catch(e){alert(e.message);}
 		}, false);
 		
