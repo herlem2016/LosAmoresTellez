@@ -46,7 +46,7 @@
 			});			
 		}
 		
-		var iniciar=function(){
+		function iniciar(){
 			try {document.addEventListener("deviceready", ondeviceready, false);} catch (e) {}
 			alert(1);
 			if(!window.navigator.onLine){
@@ -57,7 +57,7 @@
 			alert(2);
 		}
 		
-		var ondeviceready = function () {
+		function ondeviceready() {
 			window.frames["app"].postMessage({funcion:"IsPhoneGap",params:[true]},'*');
 			FCMPlugin.onNotification(function(data){
 				cordova.plugins.notification.badge.increase(1, function () { }); 
