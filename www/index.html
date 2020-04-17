@@ -16,18 +16,18 @@
 		}
 		
 		function downloadFile(datos){
-			$.post(datos.url+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos.ca, [{ name: "email", value: datos.email }, { name: "contrasena", value: datos.pass }]
+			$.post(datos[0]+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos[5], [{ name: "email", value: datos[3] }, { name: "contrasena", value: datos[4] }]
 			, function (xmlDoc) {
 				var fileTransfer = new FileTransfer();
-				var localpath = cordova.file.externalDataDirectory + datos.filename;
-				fileTransfer.download(encodeURI(datos.url),
+				var localpath = cordova.file.externalDataDirectory + datos[1];
+				fileTransfer.download(encodeURI(datos[0]),
 					localpath,
 					function (thefile) {
 						var localpath = thefile.toURL();
 						try {
 							cordova.plugins.fileOpener2.open(
 								localpath,
-								(extension == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (datos.extension == "img" ? "image/png" : "application/pdf")),
+								(dats[2] == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (datos[2] == "img" ? "image/png" : "application/pdf")),
 								{
 									error: function(){},
 									success: function(){
@@ -58,14 +58,14 @@
 		}
 		
 		function ondeviceready() {
-			window.frames["app"].postMessage({funcion:"IsPhoneGap",params:[true]},'*');
+			window.frames["app"].postMessage({funcion:"W_IsPhoneGap",params:[true]},'*');
 			FCMPlugin.onNotification(function(data){
 				cordova.plugins.notification.badge.increase(1, function () { }); 
 				/*if(data.wasTapped){
 					cordova.plugins.notification.badge.set(0);
 				}*/
 				if (data.modulo == 1){
-					window.frames["app"].postMessage({funcion:"ActivarAlarma_",params:[data.contenidovoz]},'*');
+					window.frames["app"].postMessage({funcion:"W_ActivarAlarma_",params:[data.contenidovoz]},'*');
 				}else{
 					window.frames["app"].postMessage({funcion:"W_PantallaMostrar",params:["notificaciones", "section"]},'*');
 				} 
@@ -74,18 +74,18 @@
 		
 		var i_unsubs = 0;
 		function DesSuscribirNotificaciones(datos){
-			if (i_unsubs < datos.length){
-				FCMPlugin.unsubscribeFromTopic(datos[i_unsubs], function(){
-					if (i_unsubs < l_s) {DesSuscribirNotificaciones(datos);}
+			if (i_unsubs < datos[0].length){
+				FCMPlugin.unsubscribeFromTopic(datos[0][i_unsubs], function(){
+					if (i_unsubs < l_s) {DesSuscribirNotificaciones(datos[0]);}
 				});
 			}
 		}
 
 		var i_subs = 0;
 		function SuscribirNotificaciones(datos) {
-			if (i_subs < datos.length){
-				FCMPlugin.subscribeToTopic(datos[i_subs++], function(){
-					SuscribirNotificaciones(datos); 
+			if (i_subs < datos[0].length){
+				FCMPlugin.subscribeToTopic(datos[0][i_subs++], function(){
+					SuscribirNotificaciones(datos[0]); 
 				});
 			}
 		}	
@@ -96,7 +96,7 @@
 					function (results) {
 						if(results.length > 0) {							
 							try{
-								window.frames["app"].postMessage({funcion:'CargarImagenPhoneGap',params:[results[results.length-1]]},'*');
+								window.frames["app"].postMessage({funcion:'W_CargarImagenPhoneGap',params:[results[results.length-1]]},'*');
 							}catch(e){alert(e.message);}
 						};	
 					}, function (error) {
