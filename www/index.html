@@ -54,9 +54,8 @@
 				);
 			});			
 		}
-		
-		window.onload= function(){
-			try {document.addEventListener("deviceready", ondeviceready, false);} catch (e) {}
+		try {document.addEventListener("deviceready", ondeviceready, false);} catch (e) {}
+		window.onload= function(){			
 			if(!window.navigator.onLine){
 				window.frames["app"].location.href="no-internet.html";
 			}else{
@@ -64,10 +63,13 @@
 			}
 		}
 		
-		function ondeviceready() {
+		function WebViewLista(){
 			try{
-			window.frames["app"].postMessage({funcion:"IsPhoneGap"},'*');
+				window.frames["app"].postMessage({funcion:"IsPhoneGap"},'*');
 			}catch(e){alert(e.message);}
+		}
+		
+		function ondeviceready() {			
 			FCMPlugin.onNotification(function(data){
 				cordova.plugins.notification.badge.increase(1, function () { }); 
 				/*if(data.wasTapped){
@@ -124,6 +126,7 @@
 					case "SuscribirNotificaciones": SuscribirNotificaciones(event.data.datos);
 					case "DesSuscribirNotificaciones": DesSuscribirNotificaciones(event.data.datos);
 					case "downloadFile": downloadFile(event.data.datos);
+					case "WebViewLista": WebViewLista();
 				}
 			}catch(e){alert(e.message);}
 		}, false);
