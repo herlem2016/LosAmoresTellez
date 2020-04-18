@@ -93,7 +93,7 @@
 
 		var i_subs = 0;
 		function SuscribirNotificaciones(datos) {
-			if (i_subs < datos.length-1){
+			if (i_subs < datos.length){
 				FCMPlugin.subscribeToTopic(datos[i_subs++], function(){
 					alert(datos[i_subs++]);
 					SuscribirNotificaciones(datos); 
