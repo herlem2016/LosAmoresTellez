@@ -23,7 +23,6 @@
 		
 		function downloadFile(datos){
 			var urlp=_url +'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos.codigoActivacion+"&email="+ datos.email+"&contrasena="+ datos.contrasena;
-			alert(urlp);
 			
 			$.post(urlp
 			, function (xmlDoc) {
