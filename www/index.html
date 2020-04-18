@@ -22,21 +22,21 @@
 		}
 		
 		function downloadFile(datos){
-			var urlp=datos[0]+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos[5]+"&email="+ datos[3]+"&contrasena="+ datos[4];
+			var urlp=datos.url+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos.codigoActivacion+"&email="+ datos.email+"&contrasena="+ datos.contrasena;
 			alert(urlp);
 			
 			$.post(urlp
 			, function (xmlDoc) {
 				var fileTransfer = new FileTransfer();
-				var localpath = cordova.file.externalDataDirectory + datos[1];
-				fileTransfer.download(encodeURI(datos[0]),
+				var localpath = cordova.file.externalDataDirectory + datos.nombreArch;
+				fileTransfer.download(encodeURI(datos.url),
 					localpath,
 					function (thefile) {
 						var localpath = thefile.toURL();
 						try {
 							cordova.plugins.fileOpener2.open(
 								localpath,
-								(datos[2] == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (datos[2] == "img" ? "image/png" : "application/pdf")),
+								(datos.extension == "xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : (datos.extension == "img" ? "image/png" : "application/pdf")),
 								{
 									error: function(){},
 									success: function(){
@@ -65,7 +65,6 @@
 		
 		function WebViewLista(){
 			try{
-			alert(22);
 				window.frames["app"].postMessage({funcion:"IsPhoneGap"},'*');
 			}catch(e){alert(e.message);}
 		}
@@ -86,18 +85,18 @@
 		
 		var i_unsubs = 0;
 		function DesSuscribirNotificaciones(datos){
-			if (i_unsubs < datos[0].length){
-				FCMPlugin.unsubscribeFromTopic(datos[0][i_unsubs], function(){
-					if (i_unsubs < l_s) {DesSuscribirNotificaciones(datos[0]);}
+			if (i_unsubs < datos.length){
+				FCMPlugin.unsubscribeFromTopic(datos[i_unsubs], function(){
+					if (i_unsubs < l_s) {DesSuscribirNotificaciones(datos);}
 				});
 			}
 		}
 
 		var i_subs = 0;
 		function SuscribirNotificaciones(datos) {
-			if (i_subs < datos[0].length){
-				FCMPlugin.subscribeToTopic(datos[0][i_subs++], function(){
-					SuscribirNotificaciones(datos[0]); 
+			if (i_subs < datos.length){
+				FCMPlugin.subscribeToTopic(datos[i_subs++], function(){
+					SuscribirNotificaciones(datos); 
 				});
 			}
 		}	
