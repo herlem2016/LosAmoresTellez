@@ -121,12 +121,12 @@
 		window.addEventListener("message", function(event) {
 			try{
 				switch(event.data.funcion){
-					case "Conectar": Conectar();
-					case "SeleccionarImagenes": SeleccionarImagenes();
-					case "SuscribirNotificaciones": SuscribirNotificaciones(event.data.datos);
-					case "DesSuscribirNotificaciones": DesSuscribirNotificaciones(event.data.datos);
-					case "downloadFile": downloadFile(event.data.datos);
-					case "WebViewLista": WebViewLista();
+					case "Conectar": Conectar();break;
+					case "SeleccionarImagenes": SeleccionarImagenes();break;
+					case "SuscribirNotificaciones": SuscribirNotificaciones(event.data.datos);break;
+					case "DesSuscribirNotificaciones": DesSuscribirNotificaciones(event.data.datos);break;
+					case "downloadFile": downloadFile(event.data.datos);break;
+					case "WebViewLista": WebViewLista();break;
 				}
 			}catch(e){alert(e.message);}
 		}, false);
