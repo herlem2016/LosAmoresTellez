@@ -65,6 +65,7 @@
 		
 		function WebViewLista(){
 			try{
+			alert(22);
 				window.frames["app"].postMessage({funcion:"IsPhoneGap"},'*');
 			}catch(e){alert(e.message);}
 		}
@@ -120,7 +121,8 @@
 				
 		window.addEventListener("message", function(event) {
 			try{
-				switch(window[event.data.funcion]){
+				alert(event.data.funcion);
+				switch(event.data.funcion){
 					case "Conectar": Conectar();
 					case "SeleccionarImagenes": SeleccionarImagenes();
 					case "SuscribirNotificaciones": SuscribirNotificaciones(event.data.datos);
