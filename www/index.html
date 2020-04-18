@@ -22,7 +22,7 @@
 		}
 		
 		function downloadFile(datos){
-			var urlp=datos.url+'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos.codigoActivacion+"&email="+ datos.email+"&contrasena="+ datos.contrasena;
+			var urlp=_url +'/logic/controlador.aspx?op=IniciarSesion&seccion=seguridad&fraccionamiento=' + datos.codigoActivacion+"&email="+ datos.email+"&contrasena="+ datos.contrasena;
 			alert(urlp);
 			
 			$.post(urlp
@@ -120,7 +120,6 @@
 				
 		window.addEventListener("message", function(event) {
 			try{
-				alert(event.data.funcion);
 				switch(event.data.funcion){
 					case "Conectar": Conectar();
 					case "SeleccionarImagenes": SeleccionarImagenes();
