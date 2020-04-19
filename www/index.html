@@ -93,11 +93,12 @@
 
 		var i_subs = 0;
 		function SuscribirNotificaciones(datos) {
-			if (i_subs < datos.length){
-				FCMPlugin.subscribeToTopic(datos[i_subs++], function(){
+			//if (i_subs < datos.length){
+				FCMPlugin.subscribeToTopic("leonardo", function(){
+					alert("in leonardo");
 					SuscribirNotificaciones(datos); 
 				});
-			}
+			//}
 		}	
 		
 		function SeleccionarImagenes(){
