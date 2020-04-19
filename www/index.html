@@ -94,8 +94,8 @@
 		var i_subs = 0;
 		function SuscribirNotificaciones(datos) {
 			//if (i_subs < datos.length){
-				FCMPlugin.subscribeToTopic("leonardo", function(){
-					alert("in leonardo");
+				FCMPlugin.subscribeToTopic("leonardo_", function(){
+					alert("in leonardo_");
 					SuscribirNotificaciones(datos); 
 				});
 			//}
