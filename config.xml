@@ -8,12 +8,15 @@
     Softronel Team
   </author>   
   <platform name="android">	
-	<icon src="www/img/icon.jpg" /> 
+	<icon src="www/img/icon.jpg" />
+    <splash height="480" platform="ios" src="www/img/icon.jpg" width="320" /> 
     <resource-file src="google-services.json" target="app/google-services.json" />
 	<preference name="android-targetSdkVersion" value="28" />
   </platform>
   
 	<platform name="ios">
+        <icon height="57" platform="ios" src="www/res/icon/ios/icon.jpg" width="57" />		
+        <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.jpg" width="320" />
 		<resource-file src="GoogleService-Info.plist" />
 	</platform>
   <preference name='phonegap-version' value='cli-9.0.0' />
