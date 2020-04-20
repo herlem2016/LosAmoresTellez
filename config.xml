@@ -8,7 +8,7 @@
     Softronel Team
   </author>   
   <platform name="android">	
-    <icon src="www/img/icon.png" /> 
+    <icon src="www/img/icon.jpg" /> 
     <resource-file src="google-services.json" target="app/google-services.json" />
 	<preference name="android-targetSdkVersion" value="28" />
   </platform>
