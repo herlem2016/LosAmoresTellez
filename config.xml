@@ -15,6 +15,7 @@
   
 	<platform name="ios">
 		<resource-file src="GoogleService-Info.plist" />
+		<plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
 	</platform>
    
     <platform name="ios">
