@@ -20,6 +20,7 @@
    
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
+        <icon height="1024" platform="ios" src="www/res/icon/ios/icon-1024.png" width="1024" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
         <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
         <icon height="80" platform="ios" src="www/res/icon/ios/icon-40@2x.png" width="80" />
@@ -62,9 +63,9 @@
   
   <preference name="orientation" value="portrait" />
   <content src="index.html" />
-  <allow-intent href="*" />
-  <access origin="*" />
-  <allow-navigation href="*" />  
+  <allow-intent href="http://frt.hopto.org:84" />
+  <access origin="frt.hopto.org:84" />
+  <allow-navigation href="http://frt.hopto.org:84" />  
   
   <platform name="android">
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
