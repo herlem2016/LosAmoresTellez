@@ -49,18 +49,6 @@
     </platform>
 	
   <preference name='phonegap-version' value='cli-9.0.0' />
-  <preference name="android-compileSdkVersion" value="26" />
-  <plugin name="cordova-plugin-background-mode-fixed" spec="0.7.8" source="npm" />	
-  <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
-  <plugin name="cordova-plugin-inappbrowser" source="npm" />
-  <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-  <plugin name="cordova-plugin-image-picker"  source="npm" />
-  <plugin name="cordova-plugin-file-transfer" source="npm" />
-  <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-  <plugin name="cordova-plugin-badge"/>
-  <plugin name="cordova-plugin-device"/>
-  <plugin name="cordova-plugin-file"/>
-  <plugin name="cordova-plugin-file-opener2"/> 
   
   <preference name="orientation" value="portrait" />
   <content src="index.html" />
