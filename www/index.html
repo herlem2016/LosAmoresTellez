@@ -72,6 +72,7 @@
 			FCMPlugin.onNotification(function(data){
 				cordova.plugins.backgroundMode.enable();
 				cordova.plugins.backgroundMode.moveToBackground();
+				cordova.plugins.autoStart.enable();
 				cordova.plugins.notification.badge.increase(1, function () { }); 
 				/*if(data.wasTapped){
 					cordova.plugins.notification.badge.set(0);
