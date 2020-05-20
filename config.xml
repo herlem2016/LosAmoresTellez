@@ -49,9 +49,9 @@
     </platform>
 	
   <preference name='phonegap-version' value='cli-9.0.0' />
-  <plugin name="cordova-plugin-background-mode-fixed" spec="0.7.8" source="npm" />	
+  <plugin name="cordova-plugin-background-mode" spec="0.7.3" source="npm" />	
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
-  <plugin name="cordova-plugin-inappbrowser" source="npm" />
+  <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~3.2.0" />
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
   <plugin name="cordova-plugin-image-picker"  source="npm" />
   <plugin name="cordova-plugin-file-transfer" source="npm" />
