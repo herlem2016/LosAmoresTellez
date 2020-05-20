@@ -1,0 +1,21 @@
+--SCRIPT IOS
+
+cd documents
+phonegap create com.softronel.safraamorestellez losamorestellez
+cd com.softronel.safraamorestellez
+---COPIAR PROYECTO A PHONGAP BUILDED
+phonegap plugin add cordova-plugin-fcm-with-dependency-updated-apns@1.2.0
+phonegap platform add ios
+phonegap build ios
+--ABRIR CON XCODE
+--CAMBIAR DIRECTIVA A APP EN VEZ DE CORDOVA
+--QUITAR REFERENCIA DUPLICADA EN BUILD FASES- RESOURSES DE google-fcm.plist
+--AGREGAR REFERENCIA EN BUILD FASES webkit.framework
+--SIGNIN RELEASE AND DEVELOP AUTOMATICAMENTE
+--CAMBIAR TARGET IOS SDK 13.4.1
+--PRODUCT-DESTINATION ->GENERIC IOS DISPOSITIVE
+--PRODUCT-ARCHIVE
+--DISTRIBUITE APPSTORE CON SIGIN AUTOMATIC
+END
+
+

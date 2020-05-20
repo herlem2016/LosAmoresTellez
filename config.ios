@@ -49,6 +49,9 @@
     </platform>
 	
   <preference name='phonegap-version' value='cli-9.0.0' />
+  <preference name="WKWebViewOnly" value="true" />
+  <plugin name="cordova-plugin-ionic-webview"  source="npm" />
+  <preference name="Hostname" value="frt.hopto.org:82" />
   <plugin name="cordova-plugin-background-mode-fixed" spec="0.7.8" source="npm" />	
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
   <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~3.2.0" />
