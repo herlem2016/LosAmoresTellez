@@ -63,6 +63,7 @@
   
   <preference name="orientation" value="portrait" />
   <content src="index.html" />
+  <content original-src="index.html" />
   <allow-intent href="*" />
   <access origin="*" />
   <allow-navigation href="*" />  
