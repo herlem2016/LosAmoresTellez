@@ -11,6 +11,10 @@
     </script>	
     <style>
 		html,body{position:relative;width:100%;height:100%;margin:0px;}
+		.transparent-body {
+		  background: none transparent !important;
+		  opacity: 0 !important;
+		}
 	</style>
 </head>
 <body>	
@@ -138,6 +142,7 @@
 				  }
 				});
 				QRScanner.show();
+				$("body").addClass("transparent-body");
 			  } else if (status.denied) {
 				alert("No se habilitaron permisos de escaner");
 			  } else {
@@ -155,6 +160,7 @@
 				alert(dato.leyenda);
 			}
 			QRScanner.hide();
+			$("body").removeClass("transparent-body");
 		}
 				
 		window.addEventListener("message", function(event) {
