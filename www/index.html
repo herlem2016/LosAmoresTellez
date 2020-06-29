@@ -15,6 +15,8 @@
 </head>
 <body>	
 	<iframe id="app" name="app" src="" style="margin:0px;height:100%;width:100%;border:0px;" border="0px;"></iframe>
+	<audio style="display:none;" id="ok-acceso" src="audio/ok-acceso.mp3"></audio>
+	<audio style="display:none;" id="no-acceso" src="audio/no-acceso.mp3"></audio>
 	<script type="text/javascript">
 		var _url="http://frt.hopto.org:82";		
 		function Conectar(){	
@@ -119,6 +121,41 @@
 				
 			} catch (e) { alert(e.message);}
 		}
+		
+		
+		
+		function ObtenerQR(){
+			QRScanner.prepare(function(err, status){
+			  if (err) {
+				   alert("Ocurrio un error al inicializar escaner");
+			  }
+			  if (status.authorized) {
+				QRScanner.scan(function (err, text){
+				  if(err){
+					alert("Ocurrio un error al inicializar escaner");
+				  } else {
+					window.frames["app"].postMessage({funcion:'CargarImagenPhoneGap',text},'*');
+				  }
+				});
+				QRScanner.show();
+			  } else if (status.denied) {
+				alert("No se habilitaron permisos de escaner");
+			  } else {
+				alert("No se habilitaron permisos de escaner");
+			  }
+			});
+		}
+		
+		function ResultadoValidacionQR(dato){
+			if(dato.res){
+				document.getElemetById("ok-acceso").play();
+				alert(dato.leyenda);
+			}else{
+				document.getElemetById("no-acceso").play();
+				alert(dato.leyenda);
+			}
+			QRScanner.hide();
+		}
 				
 		window.addEventListener("message", function(event) {
 			try{
@@ -129,6 +166,7 @@
 					case "DesSuscribirNotificaciones": DesSuscribirNotificaciones(event.data.datos);break;
 					case "downloadFile": downloadFile(event.data.datos);break;
 					case "WebViewLista": WebViewLista();break;
+					case "ResultadoValidacionQR": ResultadoValidacionQR(event.data.datos);break;
 				}
 			}catch(e){alert(e.message);}
 		}, false);

@@ -50,6 +50,7 @@
 	
   <preference name='phonegap-version' value='cli-9.0.0' />
   <plugin name="cordova-plugin-background-mode" spec="0.7.3" source="npm" />	
+  <plugin name="cordova-plugin-qrscanner" spec="3.0.1" source="npm" />	
   <plugin name="cordova-plugin-autostart" spec="2.3.0" source="npm" />	
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
   <plugin name="cordova-plugin-inappbrowser" source="npm"/>
