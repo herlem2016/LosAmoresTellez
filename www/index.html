@@ -153,10 +153,10 @@
 		
 		function ResultadoValidacionQR(dato){
 			if(dato.res){
-				document.getElemetById("ok-acceso").play();
+				document.getElementById("ok-acceso").play();
 				alert(dato.leyenda);
 			}else{
-				document.getElemetById("no-acceso").play();
+				document.getElementById("no-acceso").play();
 				alert(dato.leyenda);
 			}
 			QRScanner.hide();
