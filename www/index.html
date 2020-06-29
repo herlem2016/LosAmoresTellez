@@ -138,7 +138,7 @@
 				  if(err){
 					alert("Ocurrio un error al inicializar escaner");
 				  } else {
-					window.frames["app"].postMessage({funcion:'CargarImagenPhoneGap',text},'*');
+					window.frames["app"].postMessage({funcion:'ResultadoQr',dato:text},'*');
 				  }
 				});
 				QRScanner.show();
