@@ -7,17 +7,22 @@
   <author email="info@softronel.com.mx" href="softronel.com.mx">
     Softronel Team
   </author>   
+  
+  <preference name="debuggable" value="false" />
+  <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
+  
   <platform name="android">	
     <icon src="www/img/icon.jpg" /> 
     <resource-file src="google-services.json" target="app/google-services.json" />
-	<preference name="android-targetSdkVersion" value="28" /><preference name="SplashScreen" value="screen" />
+	<preference name="android-targetSdkVersion" value="28" />
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenBackgroundColor" value="0x0000FFFF"/>
     <preference name="SplashScreenDelay" value="10000" />
 	<splash src="www/img/splash.png" />
   </platform>
   
 	<platform name="ios">
 		<resource-file src="GoogleService-Info.plist" />
-		<plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
 	</platform>
    
     <platform name="ios">
