@@ -59,11 +59,11 @@
   <plugin name="cordova-plugin-background-mode" spec="0.7.3" source="npm" />	
   <plugin name="cordova-plugin-qrscanner" spec="3.0.1" source="npm" />	
   <plugin name="cordova-plugin-autostart" spec="2.3.0" source="npm" />	
-  <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.0" source="npm" />   
+  <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.1" source="npm" />   
   <plugin name="cordova-plugin-inappbrowser" source="npm"/>
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
   <!--Este plugin se registra así, debido a que el que existe sin url no tiene la opción de inputype stringbase64 img-->
-  <plugin spec="https://github.com/Telerik-Verified-Plugins/ImagePicker.git"/>
+  <plugin spec="https://github.com/Telerik-Verified-Plugins/ImagePicker.git#2.3.4"/>
   <plugin name="cordova-plugin-file-transfer" source="npm" />
   <plugin name="cordova-plugin-badge"/>
   <plugin name="cordova-plugin-device"/>
