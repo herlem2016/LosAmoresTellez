@@ -55,10 +55,8 @@
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
     </platform>
 	
-  <preference name='phonegap-version' value='cli-9.0.0' />
-  <plugin name="cordova-plugin-background-mode" spec="0.7.3" source="npm" />	
+  <preference name='phonegap-version' value='cli-9.0.0' />	
   <plugin name="cordova-plugin-qrscanner" spec="3.0.1" source="npm" />	
-  <plugin name="cordova-plugin-autostart" spec="2.3.0" source="npm" />	
   <plugin name="cordova-plugin-fcm-with-dependency-updated-apns" spec="~1.2.1" source="npm" />   
   <plugin name="cordova-plugin-inappbrowser" source="npm"/>
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
@@ -84,8 +82,7 @@
 		
 		<edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:label='@string/activity_name']" mode="merge">
 			<activity android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
-		</edit-config>
-		
+		</edit-config>		
     </platform>
 	
 </widget>
